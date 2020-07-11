@@ -1,0 +1,45 @@
+@import "./vars";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  color: $black;
+}
+
+button,
+input,
+textarea {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Paytone One', sans-serif;
+  font-weight: 400;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  outline: none;
+}
