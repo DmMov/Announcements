@@ -1,0 +1,19 @@
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin stretch($position, $value: 0){
+  position: $position;
+  top: $value;
+  left: $value;
+  right: $value;
+  bottom: $value;
+}
+@mixin position($type, $t, $r, $b, $l) {
+  position: $type;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}

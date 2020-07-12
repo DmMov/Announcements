@@ -1,0 +1,82 @@
+@import "assets/scss/vars";
+
+.announcementItem {
+  display: grid;
+  grid-gap: .5rem;
+  padding: 1rem;
+  border: 1px solid darken($light, 10%);
+  position: relative;
+
+  $this: &;
+
+  &.chosen {
+    background-color: $primary !important;
+    border-color: $primary;
+    color: #ffffff;
+
+    #{$this}__description {
+      color: #ffffff;
+    }
+
+    #{$this}__seeDetailsBtn {
+      color: #ffffff;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  &__description {
+    color: $gray;
+    font-size: .8rem;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  .btn {
+    padding: 0;
+    border: none;
+  }
+
+  &__seeDetailsBtn {
+    padding: .5rem 0;
+    justify-self: start;
+  }
+
+  &__removeBtn {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 1rem;
+    height: 1rem;
+    opacity: .5;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.btn.editToggleBtn {
+  padding: 0;
+  border: none;
+  justify-self: end;
+  opacity: .5;
+
+  .editIcon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .closeIcon {
+    width: .75rem;
+    height: .75rem;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+}

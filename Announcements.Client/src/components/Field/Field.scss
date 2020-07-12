@@ -1,0 +1,44 @@
+@import "assets/scss/vars";
+
+.field {
+  $this: &;
+
+  display: grid;
+  grid-gap: .5rem;
+
+  &.error {
+    #{$this}__label {
+      color: $red;
+    }
+
+    #{$this}__control {
+      border-color: $red;
+    }
+  }
+
+  &__label {
+    text-transform: capitalize;
+    font-size: .8rem;
+    font-weight: 500;
+    color: $gray;
+  }
+
+  &__control {
+    padding: .75rem 1rem;
+    border: 1px solid darken($light, 10%);
+  }
+
+  textarea {
+    resize: none;
+    min-height: 5rem;
+  }
+
+  &__error {
+    font-size: .7rem;
+    color: $red;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}

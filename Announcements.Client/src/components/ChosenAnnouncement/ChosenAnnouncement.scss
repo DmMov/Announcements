@@ -1,0 +1,54 @@
+@import "assets/scss/vars";
+
+.chosenAnnouncement, .notChosen {
+  padding: 1rem;
+  border: 1px solid darken($light, 10%);
+  grid-row: 1 / 3;
+  align-self: start;
+}
+
+.chosenAnnouncement {
+  display: grid;
+  grid-gap: .5rem;
+
+  &__createdAt {
+    font-size: .75rem;
+    font-weight: 500;
+    color: $primary;
+  }
+
+  &__similarAnnouncements {
+    display: grid;
+    grid-gap: .5rem;
+
+    .editToggleBtn {
+      display: none;
+    }
+  }
+
+  &__description {
+    font-size: .85rem;
+    color: $gray;
+  }
+
+  &__subTitle {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    color: $gray;
+  }
+
+  .announcementItem__removeBtn {
+    display: none;
+  }
+}
+
+.notChosen {
+  font-size: .8rem;
+  color: $gray;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}

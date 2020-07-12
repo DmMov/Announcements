@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Newsier.WebUI.Controllers
+namespace Announcements.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

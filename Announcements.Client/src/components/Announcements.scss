@@ -1,0 +1,57 @@
+@import "assets/scss/vars";
+
+.announcements {
+  $this: &;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    grid-template-rows: 100%;
+    padding: .5rem 2rem;
+    background-color: $black;
+    height: 3rem;
+
+    #{$this}__logo {
+      max-height: 100%;
+    }
+
+    #{$this}__logoPost {
+      color: #ffffff;
+    }
+  }
+
+  &__contentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80rem;
+    margin: 0 auto;
+    grid-gap: 2rem;
+    padding: 2rem;
+
+    #{$this}__formSection, #{$this}__listSection {
+      padding: 1rem;
+      border: 1px solid darken($light, 10%);
+    }
+
+    #{$this}__title {
+      text-align: center;
+      text-transform: capitalize;
+      padding-bottom: 1rem;
+    }
+
+    #{$this}__noAnnouncements {
+      font-size: 0.8rem;
+      color: $gray;
+      text-align: center;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    #{$this}__list {
+      display: grid;
+      grid-gap: 1rem;
+    }
+  }
+}
